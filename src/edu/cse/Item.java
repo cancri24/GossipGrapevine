@@ -6,7 +6,7 @@ class Item implements Subject {
 
    // Item(String Owner) {Owner = name;}
 
-    String getName() { return Owner; }
+    public String getName() { return Owner; }
 
     public String ownerPosession() {
     if (Owner == null) {
