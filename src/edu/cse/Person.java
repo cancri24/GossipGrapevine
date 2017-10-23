@@ -1,4 +1,4 @@
 package edu.cse;
 
-class Person {
+class Person implements Subject {
 }
