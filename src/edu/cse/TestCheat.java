@@ -1,4 +1,4 @@
 package edu.cse;
 
-public class TestCheat extends Crime {
+class TestCheat extends Crime {
 }

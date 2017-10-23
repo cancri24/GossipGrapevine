@@ -1,4 +1,4 @@
 package edu.cse;
 
-class Person {
+public class Item {
 }

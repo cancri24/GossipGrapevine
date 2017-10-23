@@ -1,4 +1,4 @@
 package edu.cse;
 
-public class VictimCrime extends Crime {
+class VictimCrime extends Crime {
 }

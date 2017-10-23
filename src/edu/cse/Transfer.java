@@ -1,4 +1,4 @@
 package edu.cse;
 
-public class Transfer extends Gossip {
+class Transfer extends Gossip {
 }

@@ -1,4 +1,4 @@
 package edu.cse;
 
-public class Gossip {
+class Gossip {
 }

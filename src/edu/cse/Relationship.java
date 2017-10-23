@@ -1,4 +1,4 @@
 package edu.cse;
 
-public class Relationship extends Gossip {
+class Relationship extends Gossip {
 }
