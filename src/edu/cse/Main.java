@@ -8,9 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javafx.scene.control.ComboBox;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane
+import javafx.scene.control.ComboBox; // alex added
+import javafx.scene.layout.AnchorPane; // alex added
+import javafx.scene.layout.BorderPane; // alex added
 
 public class Main extends Application{
     static ComboBox cb;
