@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.BorderPane
 
 public class Main extends Application{
     static ComboBox cb;
