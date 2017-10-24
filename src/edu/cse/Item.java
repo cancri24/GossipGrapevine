@@ -1,5 +1,7 @@
 package edu.cse;
-//Edited By Samuel
+
+//edited by Samuel
+
 class Item implements Subject {
     public String Owner;
     public String Type;

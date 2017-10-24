@@ -1,5 +1,7 @@
 package edu.cse;
 
+//edited by Eleanor
+
 class Person implements Subject {
     private String myPronouns;
     private String myName;
