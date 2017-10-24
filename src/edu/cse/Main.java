@@ -25,7 +25,7 @@ public class Main extends Application{
         firstStage.setScene(theScene);
         firstStage.show();
 
-        // Alex, Creates a Combobox that lets the user choost between 3 types of pronouns
+        // Alex, Creates a Combobox that lets the user choose between 3 types of pronouns
         cb = new ComboBox(FXCollections.observableArrayList("He", "She", "Other"));
         // Change method for the Choicebox selection
         cb.getSelectionModel().selectedIndexProperty().addListener(
