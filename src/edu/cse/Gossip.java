@@ -9,8 +9,8 @@ class Gossip {
     private Subject subject;
 
     Gossip() {
-        if(rand.nextInt(10) < 5) subject = new Person();
-        else subject = new Item(subject.getName());
+        if(rand.nextInt(10) < 5) subject = new Person(null, null, null, 0);
+        else subject = new Item(null, null /*FIX ME LATER*/);
 
     }
 

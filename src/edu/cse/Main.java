@@ -20,27 +20,26 @@ public class Main extends Application{
 
     @Override
     public void start(Stage firstStage) throws Exception {
-        Button test = new Button("test");
-        Scene theScene = new Scene(test, 200, 200);
-        firstStage.setScene(theScene);
-        firstStage.show();
 
         // Alex, Creates a Combobox that lets the user choose between 3 types of pronouns
-        cb = new ComboBox(FXCollections.observableArrayList("He", "She", "Other"));
+        ComboBox cb = new ComboBox(FXCollections.observableArrayList("Male", "Female", "Other"));
         // Change method for the Choicebox selection
         cb.getSelectionModel().selectedIndexProperty().addListener(
                 new ChangeListener<Number>() {
                     @Override
                     public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                        if(new_value.intValue() == 0) {
+                        if(newValue.intValue() == 0) {
                             // Pronoun he selected
-                        }else if(new_value.intValue() == 1) {
+                        }else if(newValue.intValue() == 1) {
 
-                        }else if(new_value.intValue() == 2) {
+                        }else if(newValue.intValue() == 2) {
 
                         }
                     }
-                }
+                });
+        Scene theScene = new Scene(cb, 200, 200);
+        firstStage.setScene(theScene);
+        firstStage.show();
 
     }
 }
