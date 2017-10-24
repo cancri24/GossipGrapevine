@@ -8,7 +8,7 @@ class Person implements Subject {
     private String myStatus;
     private int myAngerLevel;
 
-    Person(String gender, String name, String status, int angerLevel){
+    Person(String gender, String name, String status, int angerLevel) {
         myPronouns = gender;
         myName = name;
         myStatus = status;
