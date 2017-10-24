@@ -20,21 +20,36 @@ class Person implements Subject {
     String getStatus(){return myStatus;}
     int getAngerLevel(){return myAngerLevel;}
     //gets her, his, their
-//    String getPPronoun(){
-//        String pronoun;
-//        if (myPronouns == "female") pronoun = "her";
-//        if (myPronouns == "male") pronoun = "his";
-//        if (myPronouns == "other") pronoun = "their";
-//        //else pronoun = "you did a typo my dude";
-//        return(pronoun);
-//    }
-//    //gets she, he, they
-//    String getNPronoun(){
-//        String pronoun;
-//        if (myPronouns == "female") pronoun = "she";
-//        if (myPronouns == "male") pronoun = "he";
-//        if (myPronouns == "other") pronoun = "they";
-//        //else pronoun = "you did a typo my dude";
-//        return(pronoun);
-//    }
+    String getPosPronoun(){
+        String pronoun;
+        if (myPronouns == "female") pronoun = "her";
+        else
+        if (myPronouns == "male") pronoun = "his";
+        else
+        if (myPronouns == "other") pronoun = "their";
+        else pronoun = "you did a typo my dude";
+        return(pronoun);
+    }
+    //gets she, he, they
+    String getSubPronoun(){
+        String pronoun;
+        if (myPronouns == "female") pronoun = "she";
+        else
+        if (myPronouns == "male") pronoun = "he";
+        else
+        if (myPronouns == "other") pronoun = "they";
+        else pronoun = "you did a typo my dude";
+        return(pronoun);
+    }
+    //gets her, him, them
+    String getPerPronoun(){
+        String pronoun;
+        if (myPronouns == "female") pronoun = "her";
+        else
+        if (myPronouns == "male") pronoun = "him";
+        else
+        if (myPronouns == "other") pronoun = "them";
+        else pronoun = "you did a typo my dude";
+        return(pronoun);
+    }
 }
