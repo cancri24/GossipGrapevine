@@ -1,13 +1,16 @@
 package edu.cse;
 
-//edited by Samuel & CJ
+//edited by Samuel, Eleanor, & CJ
 
 class Item implements Subject {
     public String Owner;
     public String Type;
-
-   //Item(String Owner) {Owner = name;}
-
+    //edited by Eleanor
+    Item(String owner_name, String type){
+        Owner = owner_name;
+        Type = type;
+    }
+    //edited by Sam & CJ
     public String getName() {
         if(Owner == null) return "a " + Type;
         else return Owner + "'s " + Type;
