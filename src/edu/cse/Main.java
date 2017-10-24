@@ -1,5 +1,6 @@
 package edu.cse;
 
+//edited by Alex & CJ
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -8,12 +9,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javafx.scene.control.ComboBox; // alex added
-import javafx.scene.layout.AnchorPane; // alex added
-import javafx.scene.layout.BorderPane; // alex added
+import javafx.scene.control.ComboBox;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import java.util.Random;
 
 public class Main extends Application{
     static ComboBox cb;
+    static Random rand = new Random();
 
     @Override
     public void start(Stage firstStage) throws Exception {
@@ -29,11 +32,11 @@ public class Main extends Application{
                 new ChangeListener<Number>() {
                     @Override
                     public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                        if (new_value.intValue() == 0) {
+                        if(new_value.intValue() == 0) {
                             // Pronoun he selected
-                        }else if (new_value.intValue() == 1) {
+                        }else if(new_value.intValue() == 1) {
 
-                        }else if (new_value.intValue() == 2) {
+                        }else if(new_value.intValue() == 2) {
 
                         }
                     }
