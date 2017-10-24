@@ -10,11 +10,11 @@ class Gossip {
 
     Gossip() {
         if(rand.nextInt(10) < 5) subject = new Person();
-        else subject = new Item();
+        else subject = new Item(subject.getName());
 
     }
 
-    String printGossip() {
+    String spreadGossip() {
          return "NOT DONE HOLD ON PL0X";
     }
 }
