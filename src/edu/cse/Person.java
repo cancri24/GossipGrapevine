@@ -8,19 +8,16 @@ class Person implements Subject {
     private String myPronouns;
     private String myName;
     private String myStatus;
-    private int myAngerLevel;
 
-    Person(String gender, String name, String status, int angerLevel) {
+    Person(String gender, String name, String status) {
         myPronouns = gender;
         myName = name;
         myStatus = status;
-        myAngerLevel = angerLevel;
     }
 
     public String getName(){return myName;}
     String getGender(){return myPronouns;}
     String getStatus(){return myStatus;}
-    int getAngerLevel(){return myAngerLevel;}
 
     //gets her, his, their
     String getPosPronoun(){
