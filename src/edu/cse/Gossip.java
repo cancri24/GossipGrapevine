@@ -9,7 +9,7 @@ class Gossip {
     private Subject subject;
 
     Gossip() {
-        if(rand.nextInt(10) < 5) subject = new Person(null, null, null);
+        if(rand.nextInt(10) < 5) subject = new Person();
         else subject = new Item(null, null /*FIX ME LATER*/);
 
     }
