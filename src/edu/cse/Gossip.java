@@ -7,10 +7,18 @@ class Gossip {
     private String where;
     private String when;
     private Subject subject;
+    private String type;
 
     Gossip() {
-        if(rand.nextInt(10) < 5) subject = new Person();
-        else subject = new Item(null, null /*FIX ME LATER*/);
+        if(rand.nextInt(10) < 5) {
+            subject = new Person();
+            type = "person";
+        }
+        else {
+            subject = new Item(null, null /*FIX ME LATER*/);
+            type = "item";
+        }
+
 
     }
 

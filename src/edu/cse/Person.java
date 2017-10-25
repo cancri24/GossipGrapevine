@@ -4,6 +4,8 @@ package edu.cse;
 
 import java.util.Objects;
 
+import static edu.cse.Main.rand;
+
 class Person implements Subject {
 
     private String[] nameStart = {"Chris", "El", "Al", "Sam"};
@@ -13,14 +15,17 @@ class Person implements Subject {
     private String[] lastNameMiddle = {""};
     private String[] lastNameEnd = {"ble"};
     private String myPronouns;
-    private String myName;
+    private String firstName;
+    private String lastName;
     private String myStatus;
 
     Person() {
-
+        String firstName = nameStart[rand.nextInt(nameStart.length-1)] + nameMiddle[rand.nextInt(nameMiddle.length-1)] + nameEnd[rand.nextInt(nameEnd.length-1)];
     }
 
-    public String getName(){return myName;}
+    public String getFirstName(){return firstName;}
+    public String getLasstName(){return lastName;}
+    public String getName(){return firstName + " " + lastName};
     String getGender(){return myPronouns;}
     String getStatus(){return myStatus;}
 
