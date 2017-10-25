@@ -14,20 +14,21 @@ class Person implements Subject {
     private String[] lastNameStart = {"Sham"};
     private String[] lastNameMiddle = {""};
     private String[] lastNameEnd = {"ble"};
+    private String[] pronouns = {"female", "male", "other"};
     private String myPronouns;
     private String firstName;
     private String lastName;
-    private String myStatus;
 
     Person() {
         String firstName = nameStart[rand.nextInt(nameStart.length-1)] + nameMiddle[rand.nextInt(nameMiddle.length-1)] + nameEnd[rand.nextInt(nameEnd.length-1)];
+        String lastName = nameStart[rand.nextInt(lastNameStart.length-1)] + lastNameMiddle[rand.nextInt(lastNameMiddle.length-1)] + lastNameEnd[rand.nextInt(lastNameEnd.length-1)];
+        String myPronouns = pronouns[rand.nextInt(pronouns.length-1)];
     }
 
     public String getFirstName(){return firstName;}
-    public String getLasstName(){return lastName;}
-    public String getName(){return firstName + " " + lastName};
+    public String getLastName(){return lastName;}
+    public String getName(){return firstName + " " + lastName;}
     String getGender(){return myPronouns;}
-    String getStatus(){return myStatus;}
 
     //gets her, his, their
     String getPosPronoun(){
