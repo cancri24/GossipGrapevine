@@ -11,7 +11,7 @@ class Person implements Subject {
     private String[] nameStart = {"Chris", "El", "Al", "Sam","Am","Bri","An","Beth","Gwen","Del","Lo","Mac","Mad","Mel","Soph","Vic","Viv","Ben"};
     private String[] nameMiddle = {"", "ea", "ta", "an","iza","da","li","do","ken","is","tor","u"};
     private String[] nameEnd = {"", "tha","nor","pher","ion","ley","a","beth","da","lah","lyn","zie","sa","ia","el","ian","son","ary"};
-    private String[] lastNameStart = {"Sham"};
+    private String[] lastNameStart = {"Sham", "Ter", "Den", "Ir", "Chu","Chan", "Tran", "Li", "Lu", "Her"};
     private String[] lastNameMiddle = {""};
     private String[] lastNameEnd = {"ble"};
     private String[] pronouns = {"female", "male", "other"};
