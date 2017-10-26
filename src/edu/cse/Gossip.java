@@ -9,9 +9,9 @@ class Gossip {
     static private String what;
     static private Subject subject;
 
-    static void spread(String type) {
-        switch(type) {
-            case "object":
+    static String getGossip(String type) {
+        switch (type) {
+            case "item":
                 subject = new Item(null, null /*FIX ME LATER*/);
                 break;
             case "person":
@@ -22,5 +22,6 @@ class Gossip {
                 else subject = new Item(null, null /*FIX ME LATER*/);
 
         }
+        return "ERROR. CODE INCOMPLETE.";
     }
 }
