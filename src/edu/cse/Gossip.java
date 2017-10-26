@@ -4,25 +4,23 @@ package edu.cse;
 import static edu.cse.Main.rand;
 
 class Gossip {
-    private String where;
-    private String when;
-    private Subject subject;
-    private String type;
+    static private String where;
+    static private String when;
+    static private String what;
+    static private Subject subject;
 
-    Gossip() {
-        if(rand.nextInt(10) < 5) {
-            subject = new Person();
-            type = "person";
+    static void spread(String type) {
+        switch(type) {
+            case "object":
+                subject = new Item(null, null /*FIX ME LATER*/);
+                break;
+            case "person":
+                subject = new Person();
+                break;
+            default:
+                if (rand.nextInt(10) < 5) subject = new Person();
+                else subject = new Item(null, null /*FIX ME LATER*/);
+
         }
-        else {
-            subject = new Item(null, null /*FIX ME LATER*/);
-            type = "item";
-        }
-
-
-    }
-
-    String spreadGossip() {
-         return "NOT DONE HOLD ON PL0X";
     }
 }
