@@ -22,7 +22,7 @@ public class Main extends Application{
     public void start(Stage firstStage) throws Exception {
 
         // Alex, Creates a Combobox that lets the user choose between 3 types of pronouns
-        ComboBox cb = new ComboBox(FXCollections.observableArrayList("Male", "Female", "Other"));
+        cb = new ComboBox(FXCollections.observableArrayList("Male", "Female", "Other"));
         // Change method for the Choicebox selection
         cb.getSelectionModel().selectedIndexProperty().addListener(
                 new ChangeListener<Number>() {

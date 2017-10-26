@@ -4,32 +4,38 @@ package edu.cse;
 
 import java.util.Objects;
 
-class Person implements Subject {
-    private String myPronouns;
-    private String myName;
-    private String myStatus;
-    private int myAngerLevel;
+import static edu.cse.Main.rand;
 
-    Person(String gender, String name, String status, int angerLevel) {
-        myPronouns = gender;
-        myName = name;
-        myStatus = status;
-        myAngerLevel = angerLevel;
+class Person implements Subject {
+
+    private String[] nameStart = {"Chris", "El", "Al", "Sam","Am","Bri","An","Beth","Gwen","Del","Lo","Mac","Mad","Mel","Soph","Vic","Viv","Ben"};
+    private String[] nameMiddle = {"", "ea", "ta", "an","iza","da","li","do","ken","is","tor","u"};
+    private String[] nameEnd = {"", "tha","nor","pher","ion","ley","a","beth","da","lah","lyn","zie","sa","ia","el","ian","son","ary"};
+    private String[] lastNameStart = {"Sham"};
+    private String[] lastNameMiddle = {""};
+    private String[] lastNameEnd = {"ble"};
+    private String[] pronouns = {"female", "male", "other"};
+    private String myPronouns;
+    private String firstName;
+    private String lastName;
+
+    Person() {
+        String firstName = nameStart[rand.nextInt(nameStart.length-1)] + nameMiddle[rand.nextInt(nameMiddle.length-1)] + nameEnd[rand.nextInt(nameEnd.length-1)];
+        String lastName = nameStart[rand.nextInt(lastNameStart.length-1)] + lastNameMiddle[rand.nextInt(lastNameMiddle.length-1)] + lastNameEnd[rand.nextInt(lastNameEnd.length-1)];
+        String myPronouns = pronouns[rand.nextInt(pronouns.length-1)];
     }
 
-    public String getName(){return myName;}
+    public String getFirstName(){return firstName;}
+    public String getLastName(){return lastName;}
+    public String getName(){return firstName + " " + lastName;}
     String getGender(){return myPronouns;}
-    String getStatus(){return myStatus;}
-    int getAngerLevel(){return myAngerLevel;}
 
     //gets her, his, their
     String getPosPronoun(){
         String pronoun;
         if (Objects.equals(myPronouns, "female")) pronoun = "her";
-        else
-        if (Objects.equals(myPronouns, "male")) pronoun = "his";
-        else
-        if (Objects.equals(myPronouns, "other")) pronoun = "their";
+        else if (Objects.equals(myPronouns, "male")) pronoun = "his";
+        else if (Objects.equals(myPronouns, "other")) pronoun = "their";
         else pronoun = "you did a typo my dude";
         return(pronoun);
     }
@@ -38,10 +44,8 @@ class Person implements Subject {
     String getSubPronoun(){
         String pronoun;
         if (Objects.equals(myPronouns, "female")) pronoun = "she";
-        else
-        if (Objects.equals(myPronouns, "male")) pronoun = "he";
-        else
-        if (Objects.equals(myPronouns, "other")) pronoun = "they";
+        else if (Objects.equals(myPronouns, "male")) pronoun = "he";
+        else if (Objects.equals(myPronouns, "other")) pronoun = "they";
         else pronoun = "you did a typo my dude";
         return(pronoun);
     }
@@ -50,10 +54,8 @@ class Person implements Subject {
     String getPerPronoun(){
         String pronoun;
         if (Objects.equals(myPronouns, "female")) pronoun = "her";
-        else
-        if (Objects.equals(myPronouns, "male")) pronoun = "him";
-        else
-        if (Objects.equals(myPronouns, "other")) pronoun = "them";
+        else if (Objects.equals(myPronouns, "male")) pronoun = "him";
+        else if (Objects.equals(myPronouns, "other")) pronoun = "them";
         else pronoun = "you did a typo my dude";
         return(pronoun);
     }

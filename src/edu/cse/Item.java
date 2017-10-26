@@ -3,8 +3,8 @@ package edu.cse;
 //edited by Samuel, Eleanor, & CJ
 
 class Item implements Subject {
-    public String Owner;
-    public String Type;
+    private String Owner;
+    private String Type;
     //edited by Eleanor
     Item(String owner_name, String type){
         Owner = owner_name;
