@@ -3,7 +3,7 @@ package edu.cse;
 //edited by CJ
 import static edu.cse.Main.rand;
 
-class Gossip {
+class Gossip implements Subject {
     private String where;
     private String when;
     private Subject subject;

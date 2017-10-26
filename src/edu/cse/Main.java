@@ -28,10 +28,11 @@ public class Main extends Application{
                 new ChangeListener<Number>() {
                     @Override
                     public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                        // pronoun he
                         if(newValue.intValue() == 0) {
-                            // Pronoun he selected
+                            //pronoun she
                         }else if(newValue.intValue() == 1) {
-
+                            // pronoun other
                         }else if(newValue.intValue() == 2) {
 
                         }

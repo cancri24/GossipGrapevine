@@ -4,4 +4,5 @@ package edu.cse;
 
 interface Subject {
     String getName();
+    String spreadGossip();
 }
