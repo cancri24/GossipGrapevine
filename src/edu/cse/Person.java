@@ -1,6 +1,6 @@
 package edu.cse;
 
-//edited by Eleanor
+//edited by Eleanor & CJ
 
 import java.util.Objects;
 
@@ -8,13 +8,13 @@ import static edu.cse.Main.rand;
 
 class Person implements Subject {
 
-    private String[] nameStart = {"Chris", "El", "Al", "Sam","Am","Bri","An","Beth","Gwen","Del","Lo","Mac","Mad","Mel","Soph","Vic","Viv","Ben"};
-    private String[] nameMiddle = {"", "ea", "ta", "an","iza","da","li","do","ken","is","tor","u"};
-    private String[] nameEnd = {"", "tha","nor","pher","ion","ley","a","beth","da","lah","lyn","zie","sa","ia","el","ian","son","ary"};
-    private String[] lastNameStart = {"Sham", "Ter", "Den", "Ir", "Chu","Chan", "Tran", "Li", "Lu", "Her"};
-    private String[] lastNameMiddle = {"nan",""};
-    private String[] lastNameEnd = {"ble", "on", "is", ""};
-    private String[] pronouns = {"female", "male", "other"};
+    static private String[] nameStart = {"Chris", "El", "Al", "Sam","Am","Bri","An","Beth","Gwen","Del","Lo","Mac","Mad","Mel","Soph","Vic","Viv","Ben"};
+    static private String[] nameMiddle = {"", "ea", "ta", "an","iza","da","li","do","ken","is","tor","u"};
+    static private String[] nameEnd = {"", "tha","nor","pher","ion","ley","a","beth","da","lah","lyn","zie","sa","ia","el","ian","son","ary"};
+    static private String[] lastNameStart = {"Sham", "Ter", "Den", "Ir", "Chu","Chan", "Tran", "Li", "Lu", "Her"};
+    static private String[] lastNameMiddle = {"nan", ""};
+    static private String[] lastNameEnd = {"ble", "on", "is", ""};
+    static private String[] pronouns = {"female", "male", "other"};
     private String myPronouns;
     private String firstName;
     private String lastName;
@@ -23,6 +23,10 @@ class Person implements Subject {
         firstName = nameStart[rand.nextInt(nameStart.length-1)] + nameMiddle[rand.nextInt(nameMiddle.length-1)] + nameEnd[rand.nextInt(nameEnd.length-1)];
         lastName = nameStart[rand.nextInt(lastNameStart.length-1)] + lastNameMiddle[rand.nextInt(lastNameMiddle.length-1)] + lastNameEnd[rand.nextInt(lastNameEnd.length-1)];
         myPronouns = pronouns[rand.nextInt(pronouns.length-1)];
+    }
+    static Person createPerson() {
+        Person themans = new Person();
+        return themans;
     }
 
     public String getFirstName(){return firstName;}
