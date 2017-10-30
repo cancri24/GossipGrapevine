@@ -21,9 +21,16 @@ public class Main extends Application{
     static ChoiceBox cb;
     static Random rand = new Random();
 // Edited by alex
+    public static void GetGossip_Click() {
+
+
+    }
+
     @Override
     public void start(Stage firstStage) throws Exception {
 
+        Button NewGossip = new Button ("New Gossip");
+        NewGossip.setOnAction(e -> GetGossip_Click());
         cb = new ChoiceBox(FXCollections.observableArrayList("Person", "Item"));
         cb.getSelectionModel().selectedIndexProperty().addListener(
                 new ChangeListener<Number>() {
