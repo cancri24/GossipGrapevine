@@ -4,13 +4,16 @@ package edu.cse;
 import static edu.cse.Main.rand;
 
 class Gossip {
-    static private String where;
-    static private String when;
-    static private String what;
-    static private Subject subject;
+    static String[] locations = {};
+    static String[] times = {"yesterday", "last week", "last night", ""};
 
-    static String getGossip(String type) {
-        switch (type) {
+    static String getGossip(String subjectType) {
+        Subject subject;
+        String where;
+        String when;
+        String what;
+
+        switch (subjectType) {
             case "item":
                 subject = new Item();
                 break;
