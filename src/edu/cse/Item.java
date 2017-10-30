@@ -18,7 +18,7 @@ class Item implements Subject {
         adj = Adjective[rand.nextInt(Adjective.length-1)];
     }
     public String getName(){
-        return "";
+        return adj+" "+type;
     }
     //edited by Sam & CJ
 //    public String getName() {
