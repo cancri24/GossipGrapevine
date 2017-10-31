@@ -43,29 +43,10 @@ public class Main extends Application{
                         }
 
                     }
-
                     // Borderpane created 5 regions; top, bottom, left, right, and center
                     BorderPane border = new BorderPane();
                     AnchorPane topAnchorPane = new AnchorPane();
 
-
-
-                    // Alex, Creates a Combobox that lets the user choose between 3 types of pronouns
-//        cb = new ComboBox(FXCollections.observableArrayList("Male", "Female", "Other"));
-//        // Change method for the Choicebox selection
-//        cb.getSelectionModel().selectedIndexProperty().addListener(
-//                new ChangeListener<Number>() {
-//                    @Override
-//                    public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-//                        // pronoun he
-//                        if(newValue.intValue() == 0) {
-//                            //pronoun she
-//                        }else if(newValue.intValue() == 1) {
-//                            // pronoun other
-//                        } else if(newValue.intValue() == 2) {
-
-
-                    //
                 });
 
         Scene theScene = new Scene(cb, 200, 200);

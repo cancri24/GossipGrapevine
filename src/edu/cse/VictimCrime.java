@@ -13,4 +13,5 @@ class VictimCrime extends Gossip {
     public String whatHappened(){
         return crime+" "+victim.getName()+".";
     }
+
 }

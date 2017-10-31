@@ -1,6 +1,6 @@
 package edu.cse;
 
-//edited by Eleanor & CJ
+//edited by Eleanor
 
 import java.util.Objects;
 

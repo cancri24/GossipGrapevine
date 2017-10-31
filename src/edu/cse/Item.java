@@ -7,6 +7,7 @@ class Item implements Subject {
     //edited by Eleanor
     static private String Type[] = {"table","chair","vending machine","desk","ruler","apple","laptop","phone"};
     static private String Adjective [] = {"bONELESS","peasy","yeezy","tainted","infected","crusty","ashy"};
+
     private String type;
     private String adj;
 //    Item(String owner_name, String type){

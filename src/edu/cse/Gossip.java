@@ -5,9 +5,12 @@ import static edu.cse.Main.rand;
 
 class Gossip {
     static private String[] locations = {"in the cafe", "in the men's room", "in the women's room", "on the roof"};
-    static private String[] times = {"yesterday", "last week", "last night", "a few centuries ago", "earlier today"};
+    static private String[] times = {"yesterday", "last week", "last night", " "};
+    static private String where;
+    static private String when;
+    static private String what;
+    static private Subject subject;
 
-    //gossip generator that takes type of gossip (item vs person) as the input
     static String getGossip(String subjectType) {
         Subject subject;
         String where = locations[rand.nextInt(locations.length-1)];
