@@ -90,7 +90,7 @@ public class Main extends Application{
                     //
 
 
-        Scene theScene = new Scene(border, 400, 400);
+        Scene theScene = new Scene(border, 400, 175);
         firstStage.setScene(theScene);
         firstStage.setTitle("Gossip Generator");
         firstStage.show();
