@@ -14,7 +14,6 @@ class Gossip {
         String when = times[rand.nextInt(times.length-1)];
         int fate = rand.nextInt(5);
         Gossip theWord;
-        String what = null;
 
         //generates subject and gossip based on subjectType
         switch (subjectType) {
@@ -24,7 +23,7 @@ class Gossip {
             case "person":
                 subject = new Person();
                 theWord = chooseGossip(subjectType, fate);
-                break;
+                return "[GENERIC] I heard that " + subject + " " + theWord.whatHappened() + " " + where + ".";
             default:
                 if (rand.nextInt(10) < 5) {
                     subject = new Person();
@@ -33,10 +32,10 @@ class Gossip {
                 else {
                     subject = new Item();
                 }
+                break;
 
         }
-        //generic gossip generation statement
-        return "[GENERIC] I heard that " + subject + " was caught " + what + " " + where +".";
+        return null;
     }
 
     //selects a gossip subclass based on subjectType
@@ -52,6 +51,11 @@ class Gossip {
                 else if (fate == 4) return new Transfer();
                 else if (fate == 5) return new VictimCrime();
         }
+        return null;
+    }
+
+    //requires each gossip subclass to have a whatHappened method
+    String whatHappened(){
         return null;
     }
 }

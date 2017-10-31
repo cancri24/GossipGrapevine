@@ -24,10 +24,6 @@ class Person implements Subject {
         lastName = nameStart[rand.nextInt(lastNameStart.length-1)] + lastNameMiddle[rand.nextInt(lastNameMiddle.length-1)] + lastNameEnd[rand.nextInt(lastNameEnd.length-1)];
         myPronouns = pronouns[rand.nextInt(pronouns.length-1)];
     }
-    static Person createPerson() {
-        Person themans = new Person();
-        return themans;
-    }
 
     public String getFirstName(){return firstName;}
     public String getLastName(){return lastName;}
