@@ -9,7 +9,7 @@ class TestCheat extends Crime {
         mySubject = subject[rand.nextInt(subject.length-1)];
     }
     public String whatHappened(){
-        return "cheated on a "+mySubject+"test";
+        return "cheated on a "+mySubject+" test";
     }
 
 }
