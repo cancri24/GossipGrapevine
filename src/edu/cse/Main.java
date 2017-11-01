@@ -23,10 +23,15 @@ public class Main extends Application{
    // static ComboBox cb;
     static ChoiceBox cb;
     static Random rand = new Random();
+    static Label gossipLabel;
 
 
 // Edited by alex
     public static void GetGossip_Click() {
+        // gets next item from Gossip
+        String newGossip = Gossip.getGossip("person");
+        System.out.println(newGossip);
+        gossipLabel.setText(newGossip);
 
 
     }
@@ -36,6 +41,8 @@ public class Main extends Application{
 
         Button NewGossip = new Button ("New Gossip");
         NewGossip.setOnAction(e -> GetGossip_Click());
+
+        gossipLabel = new Label();
 
         cb = new ChoiceBox(FXCollections.observableArrayList("Person", "Item", "Random"));
         cb.getSelectionModel().selectedIndexProperty().addListener(
@@ -57,6 +64,7 @@ public class Main extends Application{
                     BorderPane border = new BorderPane();
                     AnchorPane topAnchorPane = new AnchorPane();
                     AnchorPane bottomAnchorpane = new AnchorPane();
+                    AnchorPane centerAnchorpane = new AnchorPane();
 
                     topAnchorPane.getChildren().add(cb);
                     bottomAnchorpane.getChildren().add(NewGossip);
@@ -64,6 +72,8 @@ public class Main extends Application{
                     AnchorPane.setLeftAnchor(NewGossip, 4.20);
                     border.setTop(topAnchorPane);
                     border.setBottom(bottomAnchorpane);
+                    border.setCenter(centerAnchorpane);
+                    AnchorPane.setLeftAnchor(gossipLabel, 1.0);
 
 
 
