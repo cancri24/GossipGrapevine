@@ -12,6 +12,6 @@ class ItemPersonInvolved extends Gossip {
         what = whats[rand.nextInt(whats.length-1)];
     }
     public String whatHappened(){
-        return thedude.getName()+" "+whats;
+        return thedude.getName()+" "+what;
     }
 }

@@ -50,6 +50,7 @@ class Gossip {
 
     //selects a gossip subclass based on subjectType
     static private Gossip chooseGossip(String subjectType, int fate) {
+        String gossip;
         switch (subjectType) {
             case "item":
                 if (fate<2) return new ItemPersonInvolved();
