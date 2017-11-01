@@ -22,7 +22,7 @@ class Gossip {
             case "person":
                 subject = new Person();
                 theWord = chooseGossip(subjectType, fate);
-                return "[GENERIC] I heard that "+subject+" "+theWord.whatHappened()+" "+where+" "+when+".";
+                return "[GENERIC] I heard that "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
             default:
                 if (rand.nextInt(10) < 5) {
                     subject = new Person();
