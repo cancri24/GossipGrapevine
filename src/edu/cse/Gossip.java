@@ -52,7 +52,8 @@ class Gossip {
     static private Gossip chooseGossip(String subjectType, int fate) {
         switch (subjectType) {
             case "item":
-                return null;
+                if (fate<2) return new ItemPersonInvolved();
+                else return new ItemNoPerson();
             case "person":
                 if (fate == 0) return new Adultery();
                 else if (fate == 1) return new Crime();
