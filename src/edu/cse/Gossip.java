@@ -6,10 +6,6 @@ import static edu.cse.Main.rand;
 class Gossip {
     static private String[] locations = {"in the cafe", "in the men's room", "in the women's room", "on the roof"};
     static private String[] times = {"yesterday", "last week", "last night", " "};
-    static private String where;
-    static private String when;
-    static private String what;
-    static private Subject subject;
 
     static String getGossip(String subjectType) {
         Subject subject;
@@ -26,7 +22,7 @@ class Gossip {
             case "person":
                 subject = new Person();
                 theWord = chooseGossip(subjectType, fate);
-                return "[GENERIC] I heard that "+subject+" "+theWord.whatHappened()+" "+where+" "+when+".";
+                return "[GENERIC] I heard that "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
             default:
                 if (rand.nextInt(10) < 5) {
                     subject = new Person();

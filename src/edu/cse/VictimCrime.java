@@ -11,7 +11,7 @@ class VictimCrime extends Gossip {
         crime = crimes[rand.nextInt(crimes.length-1)];
     }
     public String whatHappened(){
-        return crime+" "+victim.getName()+".";
+        return crime+" "+victim.getName();
     }
 
 }
