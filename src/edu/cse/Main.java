@@ -20,7 +20,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.layout.StackPane;
 
 public class Main extends Application{
-   // static ComboBox cb;
+   // static ComboBx cb;
     static ChoiceBox cb;
     static Random rand = new Random();
     static Label gossipLabel;
