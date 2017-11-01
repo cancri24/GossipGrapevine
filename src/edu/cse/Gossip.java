@@ -29,7 +29,8 @@ class Gossip {
         switch (subjectType) {
             case "item":
                 subject = new Item();
-                break;
+                theWord = chooseGossip(subjectType, fate);
+                return "[Generic] Somebody once told me "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
             case "person":
                 subject = new Person();
                 theWord = chooseGossip(subjectType, fate);
