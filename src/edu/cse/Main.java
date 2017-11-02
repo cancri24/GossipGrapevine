@@ -21,40 +21,36 @@ import javafx.scene.layout.StackPane;
 
 public class Main extends Application{
    // static ComboBx cb;
-    static ChoiceBox cb;
+    static private ChoiceBox cb;
     static Random rand = new Random();
-    static Label gossipLabel;
+    static private Label gossipLabel;
 
 
 // Edited by alex
-    public static void GetGossip_Click() {
+    private static void GetGossip_Click() {
         // gets next item from Gossip
        // Subject next = Gossip();
-        String newGossip = Gossip.getGossip("item");
+        String newGossip = Gossip.getGossip("person");
         System.out.println(newGossip);
         gossipLabel.setText(newGossip);
-
-
     }
 
     @Override
     public void start(Stage firstStage) throws Exception {
-
         Button NewGossip = new Button ("New Gossip");
         NewGossip.setOnAction(e -> GetGossip_Click());
 
         gossipLabel = new Label();
-
         cb = new ChoiceBox(FXCollections.observableArrayList("Person", "Item", "Random"));
         cb.getSelectionModel().selectedIndexProperty().addListener(
                 new ChangeListener<Number>() {
                     @Override
                     public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                         // choicebox selected "Person"
-                        if (newValue.intValue() == 0) {
+                        if(newValue.intValue() == 0) {
                             // choicebox selected "Item"
-                        } else if (newValue.intValue() == 1) {
-                        } else if (newValue.intValue() == 2) {
+                        } else if(newValue.intValue() == 1) {
+                        } else if(newValue.intValue() == 2) {
                         }
 
 
@@ -75,38 +71,10 @@ public class Main extends Application{
                     border.setBottom(bottomAnchorpane);
                     border.setCenter(centerAnchorpane);
 
-
-
-
-
-
-
-
-
-
-                    // Alex, Creates a Combobox that lets the user choose between 3 types of pronouns
-//        cb = new ComboBox(FXCollections.observableArrayList("Male", "Female", "Other"));
-//        // Change method for the Choicebox selection
-//        cb.getSelectionModel().selectedIndexProperty().addListener(
-//                new ChangeListener<Number>() {
-//                    @Override
-//                    public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-//                        // pronoun he
-//                        if(newValue.intValue() == 0) {
-//                            //pronoun she
-//                        }else if(newValue.intValue() == 1) {
-//                            // pronoun other
-//                        } else if(newValue.intValue() == 2) {
-
-
-                    //
-
-
         Scene theScene = new Scene(border, 450, 175);
         firstStage.setScene(theScene);
         firstStage.setTitle("Gossip Generator");
         firstStage.show();
 
     }
-    public static void main(String[] args) {Application.launch(args);}
 }
