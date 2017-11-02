@@ -60,7 +60,7 @@ class Gossip {
     }
 
     static private String spread(String who, String what, String where, String when) {
-        int phraseChoose = rand.nextInt(11);
+        int phraseChoose = rand.nextInt(13);
         if(phraseChoose == 0) return "Somebody once told me "+who+" "+what+" "+where+" "+when+".";
         else if(phraseChoose == 1) return "Did you hear? They say "+who+" "+what+" "+where+" "+when+".";
         else if(phraseChoose == 2) return "Rumor has it "+who+" "+what+" "+where+" "+when+".";
