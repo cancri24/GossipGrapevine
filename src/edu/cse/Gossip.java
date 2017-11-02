@@ -31,7 +31,7 @@ class Gossip {
                 fate = rand.nextInt(2);
                 subject = new Item();
                 theWord = chooseGossip(subjectType, fate);
-                return "[GENERIC] Somebody once told me "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
+                return Gossip.spread(subject.getName(), theWord.whatHappened(), where, when);
             case "person":
                 fate = rand.nextInt(5);
                 subject = new Person();
