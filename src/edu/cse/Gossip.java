@@ -22,26 +22,31 @@ class Gossip {
         Subject subject;
         String where = locations[rand.nextInt(locations.length-1)];
         String when = times[rand.nextInt(times.length-1)];
-        int fate = rand.nextInt(4);
+        int fate;
         Gossip theWord;
 
         //generates subject and gossip based on subjectType
         switch (subjectType) {
             case "item":
+                fate = rand.nextInt(1);
                 subject = new Item();
                 theWord = chooseGossip(subjectType, fate);
-                return "[Generic] Somebody once told me "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
+                return "[GENERIC] Somebody once told me "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
             case "person":
+                fate = rand.nextInt(4);
                 subject = new Person();
                 theWord = chooseGossip(subjectType, fate);
                 return "[GENERIC] I heard that "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
             default:
                 if (rand.nextInt(10) < 5) {
+                    fate = rand.nextInt(4);
                     subject = new Person();
                     theWord = chooseGossip(subjectType, fate);
                 }
                 else {
+                    fate = rand.nextInt(1);
                     subject = new Item();
+                    theWord = chooseGossip(subjectType, fate);
                 }
                 break;
 
@@ -54,7 +59,7 @@ class Gossip {
         String gossip;
         switch (subjectType) {
             case "item":
-                if (fate<2) return new ItemPersonInvolved();
+                if (fate == 0) return new ItemPersonInvolved();
                 else return new ItemNoPerson();
             case "person":
                 if (fate == 0) return new Adultery();

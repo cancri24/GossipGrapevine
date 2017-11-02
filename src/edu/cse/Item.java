@@ -6,7 +6,9 @@ import static edu.cse.Main.rand;
 class Item implements Subject {
     //edited by Eleanor
     static private String Type[] = {"table","chair","vending machine","desk","ruler","apple","laptop","phone"};
-    static private String Adjective [] = {"bONELESS","peasy","yeezy","tainted","infected","crusty","ashy"};
+    static private String Adjective[] = {"bONELESS","peasy","yeezy","tainted","infected","crusty","ashy"};
+
+    static private String vowels[] = {"a", "e", "i", "o", "u"};
 
     private String type;
     private String adj;
@@ -19,6 +21,10 @@ class Item implements Subject {
         adj = Adjective[rand.nextInt(Adjective.length-1)];
     }
     public String getName(){
+        for(int i = 0; i < vowels.length; i++) {
+            if (String.valueOf(adj.charAt(0)) == vowels[i]) return "an "+adj+" "+type;
+        }
+
         return "a "+adj+" "+type;
     }
     //edited by Sam & CJ
