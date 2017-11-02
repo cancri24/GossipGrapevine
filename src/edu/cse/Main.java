@@ -30,7 +30,7 @@ public class Main extends Application{
     public static void GetGossip_Click() {
         // gets next item from Gossip
        // Subject next = Gossip();
-        String newGossip = Gossip.getGossip("item");
+        String newGossip = Gossip.getGossip("person");
         System.out.println(newGossip);
         gossipLabel.setText(newGossip);
 
