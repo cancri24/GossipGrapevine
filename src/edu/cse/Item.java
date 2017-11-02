@@ -22,7 +22,7 @@ class Item implements Subject {
     }
     public String getName(){
         for(int i = 0; i < vowels.length; i++) {
-            if (String.valueOf(adj.charAt(0)) == vowels[i]) return "an "+adj+" "+type;
+            if(String.valueOf(adj.charAt(0)).equals(vowels[i])) return "an "+adj+" "+type;
         }
 
         return "a "+adj+" "+type;

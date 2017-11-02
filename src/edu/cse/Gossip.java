@@ -28,27 +28,15 @@ class Gossip {
         //generates subject and gossip based on subjectType
         switch (subjectType) {
             case "item":
-                fate = rand.nextInt(1);
+                fate = rand.nextInt(2);
                 subject = new Item();
                 theWord = chooseGossip(subjectType, fate);
                 return "[GENERIC] Somebody once told me "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
             case "person":
-                fate = rand.nextInt(4);
+                fate = rand.nextInt(5);
                 subject = new Person();
                 theWord = chooseGossip(subjectType, fate);
                 return "[GENERIC] I heard that "+subject.getName()+" "+theWord.whatHappened()+" "+where+" "+when+".";
-            default:
-                if (rand.nextInt(10) < 5) {
-                    fate = rand.nextInt(4);
-                    subject = new Person();
-                    theWord = chooseGossip(subjectType, fate);
-                }
-                else {
-                    fate = rand.nextInt(1);
-                    subject = new Item();
-                    theWord = chooseGossip(subjectType, fate);
-                }
-                break;
 
         }
         return null;
