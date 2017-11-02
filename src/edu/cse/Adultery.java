@@ -19,5 +19,5 @@ class Adultery extends Gossip {
         else if(Objects.equals(wife.getGender(),"male"))wifeRole=mascRoles[rand.nextInt(1)];
         else wifeRole=andRoles[rand.nextInt(1)];
     }
-    public String whatHappened(){return " cheated on their "+wifeRole+" "+wife.getName()+" with "+handmaid.getName();}
+    public String whatHappened(){return "cheated on their "+wifeRole+" "+wife.getName()+" with "+handmaid.getName();}
 }
