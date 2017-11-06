@@ -30,16 +30,26 @@ class Gossip {
             case "item":
                 fate = rand.nextInt(2);
                 subject = new Item();
-                theWord = chooseGossip(subjectType, fate);
-                return Gossip.spread(subject.getName(), theWord.whatHappened(), where, when);
+                break;
             case "person":
                 fate = rand.nextInt(5);
                 subject = new Person();
-                theWord = chooseGossip(subjectType, fate);
-                return Gossip.spread(subject.getName(), theWord.whatHappened(), where, when);
-
+                break;
+            default:
+                fate = rand.nextInt(5);
+                int selectType = rand.nextInt(2);
+                if(selectType == 0) {
+                    subject = new Person();
+                    subjectType = "person";
+                }
+                else {
+                    subject = new Item();
+                    subjectType = "item";
+                }
+                break;
         }
-        return null;
+        theWord = chooseGossip(subjectType, fate);
+        return Gossip.spread(subject.getName(), theWord.whatHappened(), where, when);
     }
 
     //selects a gossip subclass based on subjectType

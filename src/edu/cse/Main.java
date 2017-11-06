@@ -22,15 +22,16 @@ import javafx.scene.layout.StackPane;
 public class Main extends Application{
    // static ComboBx cb;
     static private ChoiceBox cb;
+    private String type = "random";
     static Random rand = new Random();
     static private Label gossipLabel;
 
 
 // Edited by alex
-    private static void GetGossip_Click() {
+    private void GetGossip_Click() {
         // gets next item from Gossip
        // Subject next = Gossip();
-        String newGossip = Gossip.getGossip("person");
+        String newGossip = Gossip.getGossip(type);
         System.out.println(newGossip);
         gossipLabel.setText(newGossip);
     }
@@ -48,9 +49,13 @@ public class Main extends Application{
                     public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                         // choicebox selected "Person"
                         if(newValue.intValue() == 0) {
-                            // choicebox selected "Item"
-                        } else if(newValue.intValue() == 1) {
-                        } else if(newValue.intValue() == 2) {
+                            type = "person";
+                        }
+                        else if(newValue.intValue() == 1) {
+                            type = "item";
+                        }
+                        else if(newValue.intValue() == 2) {
+                            type = "random";
                         }
 
 
