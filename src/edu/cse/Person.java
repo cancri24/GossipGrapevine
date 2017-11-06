@@ -8,12 +8,12 @@ import static edu.cse.Main.rand;
 
 class Person implements Subject {
 
-    static private String[] nameStart = {"Chris", "El", "Al", "Sam","Am","Bri","An","Beth","Gwen","Del","Lo","Mac","Mad","Mel","Soph","Vic","Viv","Ben", "Bee"};
-    static private String[] nameMiddle = {"", "ea", "ta", "an","iza","da","li","do","ken","is","tor","u", "bee"};
-    static private String[] nameEnd = {"", "tha","nor","pher","ion","ley","a","beth","da","lah","lyn","zie","sa","ia","el","ian","son","ary", "bert", "bee"};
-    static private String[] lastNameStart = {"Sham", "Ter", "Den", "Ir", "Chu","Chan", "Tran", "Li", "Lu", "Her", "Pu", "Hil", "Bee", "Su"};
-    static private String[] lastNameMiddle = {"nan", "", "now", "ba", "bee"};
-    static private String[] lastNameEnd = {"ble", "on", "is", "", "tin", "ga", "bee", "ski", "en", "ry", "ru"};
+    static private String[] nameStart = {"Chris", "El", "Al", "Sam","Am","Bri","An","Beth","Gwen","Del","Lo","Mac","Mad","Mel","Soph","Vic","Viv","Ben", "Bee", "Bor"};
+    static private String[] nameMiddle = {"", "ea", "ta", "an","iza","da","li","do","ken","is","tor","u", "bee", "al"};
+    static private String[] nameEnd = {"", "tha","nor","pher","ion","ley","a","beth","da","lah","lyn","zie","sa","ia","el","ian","son","ary", "bert", "bee", "tee"};
+    static private String[] lastNameStart = {"Sham", "Ter", "Den", "Ir", "Chu","Chan", "Tran", "Li", "Lu", "Her", "Pu", "Hil", "Bee", "Su", "Sur", "Cu"};
+    static private String[] lastNameMiddle = {"", "nan", "now", "ba", "bee","char"};
+    static private String[] lastNameEnd = {"ck", "ble", "on", "is", "", "tin", "ga", "bee", "ski", "en", "ry", "ru", "ge"};
     static private String[] pronouns = {"female", "male", "other"};
     private String myPronouns;
     private String firstName;
