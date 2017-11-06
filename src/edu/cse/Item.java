@@ -6,7 +6,7 @@ import static edu.cse.Main.rand;
 class Item implements Subject {
     //edited by Eleanor
     static private String Type[] = {"table","chair","vending machine","desk","ruler","apple","laptop","phone"};
-    static private String Adjective[] = {"bONELESS","peasy","yeezy","tainted","infected","crusty","ashy"};
+    static private String Adjective[] = {"bONELESS","peasy","yeezy","tainted","infected","crusty","ashy","crispy"};
 
     static private String vowels[] = {"a", "e", "i", "o", "u"};
 

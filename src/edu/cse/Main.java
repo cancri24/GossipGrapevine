@@ -15,6 +15,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import sun.plugin.javascript.navig.Anchor;
 
 public class Main extends Application {
     // static ComboBx cb;
@@ -28,7 +29,7 @@ public class Main extends Application {
         // Subject next = Gossip();
         String newGossip = Gossip.getGossip(type);
         System.out.println(newGossip);
-        gossipText.setWrappingWidth(450);
+        gossipText.setWrappingWidth(400);
         gossipText.setText(newGossip);
         //gossipLabel.setText(newGossip);
     }
@@ -68,12 +69,13 @@ public class Main extends Application {
             bottomAnchorpane.getChildren().add(NewGossip);
             AnchorPane.setLeftAnchor(cb, 4.20);
             AnchorPane.setLeftAnchor(NewGossip, 4.20);
+            AnchorPane.setBottomAnchor(gossipText, 35.75);
             border.setTop(topAnchorPane);
             border.setBottom(bottomAnchorpane);
             border.setCenter(centerAnchorpane);
 
 
-            Scene theScene = new Scene(border, 450, 175);
+            Scene theScene = new Scene(border, 450, 150);
             firstStage.setScene(theScene);
             firstStage.setTitle("Gossip Generator");
             firstStage.show();
