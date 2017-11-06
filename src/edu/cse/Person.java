@@ -1,9 +1,6 @@
 package edu.cse;
 
 //edited by Eleanor
-
-import java.util.Objects;
-
 import static edu.cse.Main.rand;
 
 class Person implements Subject {
@@ -31,38 +28,9 @@ class Person implements Subject {
         }
     }
 
-    public String getFirstName(){return firstName;}
-    public String getLastName(){return lastName;}
+//    public String getFirstName(){return firstName;}
+//    public String getLastName(){return lastName;}
     public String getName(){return firstName + " " + lastName;}
     String getGender(){return myPronouns;}
 
-    //gets her, his, their
-    String getPosPronoun(){
-        String pronoun;
-        if (Objects.equals(myPronouns, "female")) pronoun = "her";
-        else if (Objects.equals(myPronouns, "male")) pronoun = "his";
-        else if (Objects.equals(myPronouns, "other")) pronoun = "their";
-        else pronoun = "you did a typo my dude";
-        return(pronoun);
-    }
-
-    //gets she, he, they
-    String getSubPronoun(){
-        String pronoun;
-        if (Objects.equals(myPronouns, "female")) pronoun = "she";
-        else if (Objects.equals(myPronouns, "male")) pronoun = "he";
-        else if (Objects.equals(myPronouns, "other")) pronoun = "they";
-        else pronoun = "you did a typo my dude";
-        return(pronoun);
-    }
-
-    //gets her, him, them
-    String getPerPronoun(){
-        String pronoun;
-        if (Objects.equals(myPronouns, "female")) pronoun = "her";
-        else if (Objects.equals(myPronouns, "male")) pronoun = "him";
-        else if (Objects.equals(myPronouns, "other")) pronoun = "them";
-        else pronoun = "you did a typo my dude";
-        return(pronoun);
-    }
 }

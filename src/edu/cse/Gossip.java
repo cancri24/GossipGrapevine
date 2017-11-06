@@ -7,17 +7,6 @@ class Gossip {
     static private String[] locations = {"in the cafe", "in the men's room", "in the women's room", "on the roof"};
     static private String[] times = {"yesterday", "last week", "last night", " "};
 
-//    public Subject next() {
-//        Subject next = Gossip[current];
-//        if (current < getGossip.length - 1) {
-//            current++;
-//        } else {
-//            current = 0;
-//        }
-//        return next;
-//        }
-
-
     static String getGossip(String subjectType) {
         Subject subject;
         String where = locations[rand.nextInt(locations.length-1)];
@@ -54,7 +43,6 @@ class Gossip {
 
     //selects a gossip subclass based on subjectType
     static private Gossip chooseGossip(String subjectType, int fate) {
-        String gossip;
         switch (subjectType) {
             case "item":
                 if (fate == 0) return new ItemPersonInvolved();

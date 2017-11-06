@@ -8,9 +8,9 @@ import static edu.cse.Main.rand;
 class Adultery extends Gossip {
     private Person wife;
     private Person handmaid;
-    private String[] femRoles = {"girlfriend","wife"};
-    private String[] mascRoles = {"boyfriend","husband"};
-    private String[] andRoles = {"partner","spouse"};
+    static private String[] femRoles = {"girlfriend","wife"};
+    static private String[] mascRoles = {"boyfriend","husband"};
+    static private String[] andRoles = {"partner","spouse"};
     private String wifeRole;
     Adultery(){
         wife = new Person();

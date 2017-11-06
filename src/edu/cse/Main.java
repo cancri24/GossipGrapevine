@@ -12,8 +12,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import java.util.Random;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import sun.plugin.javascript.navig.Anchor;
 
