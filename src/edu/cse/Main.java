@@ -15,15 +15,11 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.text.Text;
 
 public class Main extends Application {
-    // static ComboBx cb;
-    static private ChoiceBox cb;
     private String type = "random";
     static Random rand = new Random();
-    static Text gossipText = new Text();
+    private Text gossipText = new Text();
 // Edited by alex
     private void GetGossip_Click() {
-        // gets next item from Gossip
-        // Subject next = Gossip();
         String newGossip = Gossip.getGossip(type);
         System.out.println(newGossip);
         gossipText.setWrappingWidth(400);
@@ -36,8 +32,7 @@ public class Main extends Application {
             Button NewGossip = new Button("New Gossip");
             NewGossip.setOnAction(e -> GetGossip_Click());
 
-            //gossipLabel = new Label();
-
+            ChoiceBox cb;
             cb = new ChoiceBox(FXCollections.observableArrayList("Person", "Item", "Random"));
             cb.getSelectionModel().selectedIndexProperty().addListener(
                     new ChangeListener<Number>() {
