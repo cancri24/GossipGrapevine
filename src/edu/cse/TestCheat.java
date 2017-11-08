@@ -1,3 +1,5 @@
+//edited by Eleanor
+
 package edu.cse;
 
 import static edu.cse.Main.rand;

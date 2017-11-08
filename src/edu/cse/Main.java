@@ -13,7 +13,6 @@ import javafx.scene.layout.BorderPane;
 import java.util.Random;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.text.Text;
-import sun.plugin.javascript.navig.Anchor;
 
 public class Main extends Application {
     // static ComboBx cb;
@@ -52,8 +51,6 @@ public class Main extends Application {
                             } else if (newValue.intValue() == 2) {
                                 type = "random";
                             }
-
-
                         }
                     });
 
@@ -71,7 +68,6 @@ public class Main extends Application {
             border.setTop(topAnchorPane);
             border.setBottom(bottomAnchorpane);
             border.setCenter(centerAnchorpane);
-
 
             Scene theScene = new Scene(border, 450, 150);
             firstStage.setScene(theScene);
